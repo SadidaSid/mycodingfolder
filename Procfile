@@ -1,0 +1,1 @@
+web: gunicorn wsgi:app/Users/TausifMac/Downloads/MyHApp/mycodingfolder/app

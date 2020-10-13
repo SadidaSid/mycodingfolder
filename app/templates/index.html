@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="static/getdata.js"></script>
+<script src="static/getdata2.js"></script>
+<style>
+  #map {
+    height: 100%;
+    
+  }
+  html,body {
+    height: 100%;
+    
+  }
+</style>
+</head>
+
+<body>
+
+<div class="jumbotron text-center" class="bg-light text-dark" >
+  <h1 class="display-3" >Parcel Detail  Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+
+<div class="container">
+<table class="table">
+    <thead>
+      <tr>
+        <th >Parcel Id</th>
+        <td id="parcelid" colspan=2>Loading Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Source names</td>
+        <td  id="sourcename" coll >Loading Data</td>
+      </tr>
+         
+    </tbody>
+  </table>  
+  </div>
+  <h1>Parcel Record</h1>
+  <div id="demo" class="carousel slide" data-ride="carousel" class=.container > 
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+     </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner" >
+    <div class="carousel-item active" class="bg-dark text-white" >
+   <div id="RecordTable"  >
+   </div>
+    </div>
+    <div  class="carousel-item" class="bg-dark text-white">
+     <div id="RecordTable2"  >
+   </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev" >
+    <span class="carousel-control-prev-icon" style="background-color:black"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next" >
+    <span class="carousel-control-next-icon" style="background-color:black"></span>
+  </a>
+
+</div>
+</div>
+
+<script defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtUgiywQelZru7O1hXFlWj-SeYFy33BX4&callback=initMap">
+</script>
+
+<div id="map">
+<iframe
+width="600"
+height="450"
+frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCtUgiywQelZru7O1hXFlWj-SeYFy33BX4
+&q=Space+Needle,Seattle+WA" allowfullscreen>
+</iframe>
+</div>
+
+</body>
+</html>
